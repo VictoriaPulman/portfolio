@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112445713', 'ym');
+
+    ym(112445713, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112445713" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Резюме Пульман Виктории — Junior-аналитик данных" />
+  <title>Пульман Виктория — Junior-аналитик данных</title>
+
+  <!-- Единственная внешняя зависимость: шрифт Inter из Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 0. Верхняя закреплённая шапка навигации -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#profile">Пульман Виктория</a>
+
+      <nav class="nav-links" aria-label="Основная навигация">
+        <a href="#profile">Обо мне и навыки</a>
+        <a href="#projects">Работы</a>
+        <a href="#education">Образование</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+
+      <button class="btn btn-outline print-btn" type="button" onclick="window.print()">
+        Скачать PDF
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- 1. Единый компактный блок «Визитка + Навыки» -->
+    <section id="profile" class="section profile-section">
+      <div class="card profile-card">
+
+        <!-- Левая колонка: Визитка -->
+        <div class="profile-left">
+          <div class="identity-row">
+            <div class="photo-wrap">
+              <img
+                class="profile-photo"
+                src="assets/photo.jpg"
+                alt="Фото: Пульман Виктория"
+                onerror="handleImageError(this, 'Фото: assets/photo.jpg')"
+              />
+            </div>
+
+            <div class="identity-text">
+              <h1>Пульман Виктория</h1>
+              <p class="role">Junior-аналитик данных</p>
+              <div class="badges">
+                <span class="badge">Санкт-Петербург • Гибрид / Удалённо</span>
+                <span class="badge">от 100 000 ₽</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="about-text">
+            Начинающий аналитик данных с фокусом на поиск инсайтов, проверку гипотез
+            и построение понятных отчётов. Дополнительный навык UX-проектирования помогает 
+            делать дашборды логичными, понятными и удобными для принятия бизнес-решений.
+          </p>
+
+          <div class="contacts-row">
+            <a class="contact-link" href="tel:+79213636076">+7 (921) 363-60-76</a>
+            <a class="contact-link" href="mailto:pulmanvictoria@gmail.com">pulmanvictoria@gmail.com</a>
+            <a class="contact-link" href="https://www.linkedin.com/in/victoria-pulman/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="contact-link" href="https://github.com/VictoriaPulman" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Правая колонка: Компактные шкалы навыков -->
+        <div class="profile-right">
+          <h2 class="block-subtitle">Ключевые навыки</h2>
+          <div id="skills-list" class="skills-list"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. Блок «Портфолио и тестовые работы» -->
+    <section id="projects" class="section">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Портфолио и тестовые работы</h2>
+          <p class="section-lead">Отфильтруйте ленту по направлению и откройте работу на весь экран.</p>
+        </div>
+
+        <div id="project-filters" class="filters" aria-label="Фильтр проектов"></div>
+      </div>
+
+      <div class="slider-wrap">
+        <button class="arrow-btn arrow-prev" type="button" id="projects-prev" aria-label="Прокрутить влево">←</button>
+        <div id="projects-track" class="h-track"></div>
+        <button class="arrow-btn arrow-next" type="button" id="projects-next" aria-label="Прокрутить вправо">→</button>
+      </div>
+    </section>
+
+    <!-- 3. Блок «Образование и сертификаты» -->
+    <section id="education" class="section">
+      <h2 class="section-title">Образование и сертификаты</h2>
+
+      <div class="card edu-card">
+        <h3 class="edu-title">Государственный университет по землеустройству (ГУЗ)</h3>
+        <p class="edu-specialty">Инженер земельного кадастра</p>
+      </div>
+
+      <div class="section-head certificates-head">
+        <p class="section-lead">Сертификаты и курсы</p>
+      </div>
+
+      <div class="slider-wrap">
+        <button class="arrow-btn arrow-prev" type="button" id="certificates-prev" aria-label="Прокрутить влево">←</button>
+        <div id="certificates-track" class="h-track"></div>
+        <button class="arrow-btn arrow-next" type="button" id="certificates-next" aria-label="Прокрутить вправо">→</button>
+      </div>
+    </section>
+
+
+    <!-- 4. Блок «Обратная связь» -->
+    <section id="contact" class="section">
+      <div class="card contact-card">
+        <div class="contact-left">
+          <h2 class="section-title">Давайте обсудим задачу</h2>
+          <p class="section-lead">
+            Открыта к стажировке и первым проектам. Свяжитесь удобным способом — отвечу в течение дня.
+          </p>
+
+          <div class="contact-buttons">
+            <a class="btn btn-primary" href="tel:+79213636076">Позвонить: +7 (921) 363-60-76</a>
+            <a class="btn btn-outline" href="mailto:pulmanvictoria@gmail.com">Написать на Email</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/victoria-pulman/" target="_blank" rel="noopener">Профиль LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <h3 class="block-subtitle">Форма обратной связи</h3>
+          <form id="contact-form" class="contact-form">
+            <label>
+              <span>Ваше имя</span>
+              <input type="text" id="cf-name" name="name" placeholder="Как к вам обращаться" required />
+            </label>
+            <label>
+              <span>Контакт для ответа (LinkedIn / Email / Телефон)</span>
+              <input type="text" id="cf-contact"name="email" autocomplete="email" name="contact" placeholder="Email, LinkedIn или телефон" required />
+            </label>
+            <label>
+              <span>Сообщение</span>
+              <textarea id="cf-message" name="message" rows="4" placeholder="Кратко опишите задачу" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Пульман Виктория</span>
+      <a href="tel:+79213636076">+7 (921) 363-60-76</a>
+    </div>
+  </footer>
+
+  <!-- Модальное окно проекта -->
+  <div class="modal-overlay" id="project-modal" aria-hidden="true">
+    <div class="modal modal-project" role="dialog" aria-modal="true" aria-labelledby="pm-title">
+      <button class="modal-close" type="button" data-close-modal aria-label="Закрыть">✕</button>
+      <div class="modal-body" id="project-modal-body"></div>
+      <div class="modal-nav" id="project-modal-nav"></div>
+    </div>
+  </div>
+
+  <!-- Модальное окно сертификата -->
+  <div class="modal-overlay" id="certificate-modal" aria-hidden="true">
+    <div class="modal modal-certificate" role="dialog" aria-modal="true" aria-labelledby="cm-title">
+      <button class="modal-close" type="button" data-close-modal aria-label="Закрыть">✕</button>
+      <div class="modal-body" id="certificate-modal-body"></div>
+      <div class="modal-nav" id="certificate-modal-nav"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
